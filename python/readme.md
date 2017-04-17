@@ -1,12 +1,18 @@
-#Python Guide 
-####By Dipsy Wong
+#Python Guide
+By Dipsy Wong
 
 
 ###Overview 
+
+
+
 Python is a scripting language, need an interpreter but not compiler, so it exist in text format but not an executable file.
 
 
 ###Syntax Characteristic 
+
+
+
 Python does not require semicolon to separate different statements. Scope is started with colon `:` and defined by 4 space or 1 tab. 
 (We will discuss scope later) Beginners of python are easily mess these syntax characteristics.
 

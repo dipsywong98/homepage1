@@ -2,19 +2,29 @@
 <script>
 function out(){
 
-var c=document.getElementById("c");
-var ctx=c.getContext("2d");
-value = document.getElementById("in").value;
-for (i = 0 ; i< value.length ; i++){
-//window.alert(value[i]);
-if(value[i]!=0)ctx.fillRect(i%128,Math.floor(i/128),1,1);
-}
+    var data = document.getElementById("in").value;
+    values = data.split("#Image").splice(1);
+    console.log(values);
+    for(j=0; j<values.length; j++){
+        value = values[j];
+        c = document.createElement("canvas");
+        c.width=128,c.height=480;
+        document.getElementById("out").appendChild(c)
+        var ctx=c.getContext("2d");
+        for (i = 0 ; i< value.length ; i++){
+            //window.alert(value[i]);
+            if(value[i]!=0)ctx.fillRect(i%128,Math.floor(i/128),1,1);
+        }
+    }
+    
 }
 </script>
 <body>
-<canvas id="c" width="128px" height="480px"></canvas>
-<div><button onclick="out()">do it</button></div>
-<textarea rows="5" cols="10" id="in">
-</textarea>
+
+    <div id="out"></div>
+    <div>
+        <button onclick="out()">do it</button>
+    </div>
+    <textarea rows="5" cols="10" id="in"></textarea>
 </body>
 </html>

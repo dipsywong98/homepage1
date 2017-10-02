@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <canvas id="myCanvas" width="600" height="600" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+    <script>
+        // 0
+        //3 1
+        // 2
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        dir = 0;dir_img=0;
+        dx = [0, 1, 0, -1];
+        dy = [-1, 0, 1, 0];
+
+        head = {
+            x: 160,
+            y: 160
+        }
+
+        function render() {
+            ctx.beginPath();
+            ctx.lineWidth = 12;
+            ctx.moveTo(head.x, head.y);
+            if(head.x%16==0&&head.y%16==0) {
+                if(dir!=dir_img){
+                    ctx.lineTo(head.x+5*dx[dir], head.y+5*dy[dir]);
+                    dir=dir_img;
+                }
+                
+            }
+            head.x += dx[dir];
+            head.y += dy[dir];
+            ctx.lineTo(head.x, head.y);
+            ctx.stroke();
+        }
+
+        function checkKey(e) {
+
+            e = e || window.event;
+
+            if (e.keyCode == '38') dir_img = 0;
+            else if (e.keyCode == '40') dir_img = 2;
+            else if (e.keyCode == '37') dir_img = 3;
+            else if (e.keyCode == '39') dir_img = 1;
+        }
+        document.onkeydown = checkKey;
+        window.setInterval(render, 10);
+
+    </script>
+</body>
+
+</html>

@@ -29,6 +29,8 @@ Your browser does not support the HTML5 canvas tag.</canvas>
                 if(dir!=dir_img){
                     ctx.lineTo(head.x+5*dx[dir], head.y+5*dy[dir]);
                     dir=dir_img;
+                    ctx.moveTo(head.x, head.y);
+                    ctx.lineTo(head.x-5*dx[dir], head.y-5*dy[dir]);
                 }
                 
             }

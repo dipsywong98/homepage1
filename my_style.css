@@ -16,18 +16,59 @@
   height: 100vh;
   text-align: center;
 }
-.section.head h6{
+.section.head h6 {
   margin-top:30vh;
   font-family: "musical";
   font-size: 70px;
   font-size: 3vw;
   color: #000000;
 }
-.section.head h1{
+.section.head h1 {
   margin-top:3vh;
   font-family: "flappy";
   font-size: 70px;
   font-size: 10vw;
   text-shadow:5px 5px 3px #000000;
   color:#FFFFFF;
+}
+
+.section.head a.btn {
+  margin-top:10vh;
+  color:#000000;
+  border:10px #000000;
+  border-radius: 3px;
+}
+
+.section.quote {
+  padding-top:10vh;
+  padding-bottom: 10vh;
+}
+
+.section.quote p i {
+  font-size: 2.5vw;
+  color:#777777;
+}
+
+.section.about_me {
+  background-image: url("img/game.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: auto 100vh;
+  background-repeat: no-repeat;
+  background-color: #000000;
+  resize: both;
+  height: 100vh;
+  padding-top:10vh;
+  padding-bottom: 10vh;
+}
+
+.section.about_me div.row {
+  margin-top: 100vh;
+  background-color: #FFFFFF;
+}
+
+.section.about_me img{
+  width: 30vw;
+  resize: both;
+  padding:1vw;
 }

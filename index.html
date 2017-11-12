@@ -30,15 +30,43 @@
   </div>
   <div class="section about_me">
     <div class="container">
-      <div class="row" id="about_me">
+      <div class="row" id="about_me" style="align-content:center">
         <img src="img/icon.png" class="col s4">
         <div class="col s8">
           <h4>This is Dipsy Wong</h4>
-          <p>Year 2 Computer Science student from HKUST, web full stack and IoT developer, and also a game engineer</p>
+          <p>Year 2 Computer Science student from HKUST, full stack and IoT developer, and also a game engineer. I love putting my works on
+            my own youtube channel and facebook page using my nickname FK. Below are some of my commitments</p>
+
+          <ul>
+            <li>twf technique - Founder</li>
+            <li>HKUST Robotics Team - SmartCar senior member</li>
+            <li>Procal - Developer</li>
+            <li>USThing - Peanut Guy</li>
+          </ul>
           <a href="#works" class="waves-effect waves-light btn teal">see my works!</a>
         </div>
       </div>
     </div>
+  </div>
+  <div class="section works">
+      <div class="container">
+          <div class="row" id="about_me" style="align-content:center">
+            <img src="img/icon.png" class="col s4">
+            <div class="col s8">
+              <h4>This is Dipsy Wong</h4>
+              <p>Year 2 Computer Science student from HKUST, full stack and IoT developer, and also a game engineer. I love putting my works on
+                my own youtube channel and facebook page using my nickname FK. Below are some of my commitments</p>
+    
+              <ul>
+                <li>twf technique - Founder</li>
+                <li>HKUST Robotics Team - SmartCar senior member</li>
+                <li>Procal - Developer</li>
+                <li>USThing - Peanut Guy</li>
+              </ul>
+              <a href="#works" class="waves-effect waves-light btn teal">see my works!</a>
+            </div>
+          </div>
+        </div>
   </div>
 
   <!-- <div class="section quote container">
@@ -52,6 +80,17 @@
   </div> -->
 </body>
 <script>
+  $("a").on('click', function (event) {
+
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1000, function () {
+      });
+    } // End if
+  });
 </script>
 
 </html>

@@ -60,9 +60,10 @@
   height: 100vh;
   padding-top:10vh;
   padding-bottom: 10vh;
+  margin-bottom:100vh;
 }
 
-.section.about_me div.row {
+.section.about_me div.container {
   margin-top: 100vh;
   background-color: #FFFFFF;
 }
@@ -71,4 +72,18 @@
   width: 30vw;
   resize: both;
   padding:1vw;
+}
+
+.section.works {
+  background-image: url("img/oscon.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #000000;
+  resize: both;
+  height: 100vh;
+  padding-top:10vh;
+  padding-bottom: 10vh;
+  margin-bottom:100vh;
 }

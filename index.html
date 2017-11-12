@@ -15,59 +15,43 @@
 </head>
 
 <body>
-  <!-- <div class="navbar-fixed">
-    <nav class="transparent">
-  
-    </nav>
-    </div> -->
-  <div class="section head">
-    <h6>Welcome to</h6>
-    <h1>Dipsyland</h1>
-    <p>
-      <i>"Not lalaland nor poland"</i>
-    </p>
-    <a href="#about_me" class="waves-effect waves-teal btn transparent">Enter My Site</a>
-  </div>
-  <div class="section about_me">
-    <div class="container">
-      <div class="row" id="about_me" style="align-content:center">
-        <img src="img/icon.png" class="col s4">
-        <div class="col s8">
-          <h4>This is Dipsy Wong</h4>
-          <p>Year 2 Computer Science student from HKUST, full stack and IoT developer, and also a game engineer. I love putting my works on
-            my own youtube channel and facebook page using my nickname FK. Below are some of my commitments</p>
 
-          <ul>
-            <li>twf technique - Founder</li>
-            <li>HKUST Robotics Team - SmartCar senior member</li>
-            <li>Procal - Developer</li>
-            <li>USThing - Peanut Guy</li>
-          </ul>
+  <div id="app">
+    <div class="section head">
+      <!-- <div class="navbar-fixed">
+        <nav class="transparent">
+
+        </nav>
+      </div> -->
+      <h6>Welcome to</h6>
+      <h1>Dipsyland</h1>
+      <p>
+        <i>"Not lalaland nor poland"</i>
+      </p>
+      <a href="#about_me" class="waves-effect waves-teal btn transparent">Enter My Site</a>
+    </div>
+    <div class="section photo game">
+    </div>
+    <div class="section container" id="about_me">
+      <div class="row" style="align-content:center">
+        <img src="img/icon.png" class="profile col s4">
+        <div class="col s8">
+          <h3>This is Dipsy Wong</h3>
+          <h5>I love making games and have fun!</h5>
           <a href="#works" class="waves-effect waves-light btn teal">see my works!</a>
         </div>
       </div>
     </div>
+    <div class="section photo oscon">
+    </div>
+    <div class="section container">
+      <div class="row" id="works" style="align-content:center">
+        <h3>My Works</h3>
+      </div>
+    </div>
   </div>
-  <div class="section works">
-      <div class="container">
-          <div class="row" id="about_me" style="align-content:center">
-            <img src="img/icon.png" class="col s4">
-            <div class="col s8">
-              <h4>This is Dipsy Wong</h4>
-              <p>Year 2 Computer Science student from HKUST, full stack and IoT developer, and also a game engineer. I love putting my works on
-                my own youtube channel and facebook page using my nickname FK. Below are some of my commitments</p>
-    
-              <ul>
-                <li>twf technique - Founder</li>
-                <li>HKUST Robotics Team - SmartCar senior member</li>
-                <li>Procal - Developer</li>
-                <li>USThing - Peanut Guy</li>
-              </ul>
-              <a href="#works" class="waves-effect waves-light btn teal">see my works!</a>
-            </div>
-          </div>
-        </div>
   </div>
+
 
   <!-- <div class="section quote container">
     <p>
@@ -90,6 +74,12 @@
       }, 1000, function () {
       });
     } // End if
+  });
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > $(window).height()) {
+      console.log('hi');
+      //  $('nav')[0].;
+    }
   });
 </script>
 

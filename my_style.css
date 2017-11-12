@@ -7,6 +7,9 @@
   src: url("fonts/04B_19__.TTF") format("truetype");
 }
 
+/*
+first section's style
+*/
 .section.head {
   background-image: url("img/background.png");
   background-attachment: fixed;
@@ -15,6 +18,7 @@
   resize: both;
   height: 100vh;
   text-align: center;
+  padding-top:0px;
 }
 .section.head h6 {
   margin-top:30vh;
@@ -39,6 +43,38 @@
   border-radius: 3px;
 }
 
+/*
+general section style
+*/
+
+.section.photo {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-color: #000000;
+  height: 80vh;
+}
+
+.section.photo.game {
+  background-image: url("img/game.jpg");
+}
+
+.section.photo.oscon {
+  background-image: url("img/oscon.jpg");
+}
+
+.section.container {
+  background-color: #FFFFFF;
+  padding-top:5rem;
+  padding-bottom: 5rem;
+}
+
+.section img.profile{
+  width: 30vw;
+  resize: both;
+  padding:1vw;
+}
+
 .section.quote {
   padding-top:10vh;
   padding-bottom: 10vh;
@@ -47,43 +83,4 @@
 .section.quote p i {
   font-size: 2.5vw;
   color:#777777;
-}
-
-.section.about_me {
-  background-image: url("img/game.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-size: auto 100vh;
-  background-repeat: no-repeat;
-  background-color: #000000;
-  resize: both;
-  height: 100vh;
-  padding-top:10vh;
-  padding-bottom: 10vh;
-  margin-bottom:100vh;
-}
-
-.section.about_me div.container {
-  margin-top: 100vh;
-  background-color: #FFFFFF;
-}
-
-.section.about_me img{
-  width: 30vw;
-  resize: both;
-  padding:1vw;
-}
-
-.section.works {
-  background-image: url("img/oscon.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: #000000;
-  resize: both;
-  height: 100vh;
-  padding-top:10vh;
-  padding-bottom: 10vh;
-  margin-bottom:100vh;
 }

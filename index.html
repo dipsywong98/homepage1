@@ -15,20 +15,35 @@
 </head>
 
 <body>
-
   <div id="app">
-    <div class="section head">
-      <!-- <div class="navbar-fixed">
-        <nav class="transparent">
 
+    <div class="section head">
+      <div class="navbar-fixed">
+        <nav class="light-blue lighten-5">
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo left">Dipsyland</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li>
+                <a href="">hi</a>
+              </li>
+              <li>
+                <a href="">nah</a>
+              </li>
+              <li>
+                <a href="">what?</a>
+              </li>
+            </ul>
+          </div>
         </nav>
-      </div> -->
+      </div>
       <h6>Welcome to</h6>
       <h1>Dipsyland</h1>
       <p>
         <i>"Not lalaland nor poland"</i>
       </p>
-      <a href="#about_me" class="waves-effect waves-teal btn transparent">Enter My Site</a>
+      <p>
+        <a href="#about_me" class="waves-effect waves-teal btn transparent">Enter My Site</a>
+      </p>
     </div>
     <div class="section photo game">
     </div>
@@ -65,7 +80,6 @@
 </body>
 <script>
   $("a").on('click', function (event) {
-
     if (this.hash !== "") {
       event.preventDefault();
       var hash = this.hash;
@@ -75,12 +89,44 @@
       });
     } // End if
   });
+
+  var hide_nav = () => {
+    $('div.navbar-fixed').clearQueue();
+    $('div.navbar-fixed').animate({
+      top: '-64px'
+    }, 1000);
+  }
+
+  var show_nav = () => {
+    $('div.navbar-fixed').clearQueue();
+    $('div.navbar-fixed').animate({
+      top: '0px'
+    }, 1000, () => { });
+  }
+
+  
+  var scrollDown = false;
   $(window).scroll(function () {
     if ($(window).scrollTop() > $(window).height()) {
-      console.log('hi');
-      //  $('nav')[0].;
+      if (scrollDown == false) {
+        clearTimeout(tout);
+        scrollDown = true;
+        show_nav();
+      }
+
+    }
+    else {
+      if (scrollDown == true) {
+        scrollDown = false;
+        hide_nav();
+      }
     }
   });
+  var tout = window.setTimeout(() => {
+    hide_nav();
+  }, 1000);
+
+
 </script>
 
 </html>

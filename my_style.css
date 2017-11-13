@@ -7,6 +7,19 @@
   src: url("fonts/04B_19__.TTF") format("truetype");
 }
 
+.b{
+  background-color:#84C3CF
+}
+
+nav div.nav-wrapper {
+  padding-left:5vw;
+  padding-right:5vw;
+}
+
+nav div.nav-wrapper a {
+  color:#4fc3f7;
+}
+
 /*
 first section's style
 */
@@ -17,7 +30,6 @@ first section's style
   background-size: auto 100vh;
   resize: both;
   height: 100vh;
-  text-align: center;
   padding-top:0px;
 }
 .section.head h6 {
@@ -26,6 +38,7 @@ first section's style
   font-size: 70px;
   font-size: 3vw;
   color: #000000;
+  text-align: center;
 }
 .section.head h1 {
   margin-top:3vh;
@@ -34,6 +47,11 @@ first section's style
   font-size: 10vw;
   text-shadow:5px 5px 3px #000000;
   color:#FFFFFF;
+  text-align: center;
+}
+
+.section.head p {
+  text-align: center;
 }
 
 .section.head a.btn {

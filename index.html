@@ -5,7 +5,7 @@
   <title>Dipsyland</title>
   <link rel="shortcut icon" type="image/png" href="img/icon.png" />
   <script src="js/jquery-3.2.1.min.js"></script>
-  <script src="js/vue.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <link rel="stylesheet" href="css/materialize.min.css">
   <link rel="stylesheet" href="my_style.css">
   <script src="js/materialize.min.js"></script>
@@ -58,6 +58,27 @@
     <div class="section container" id="my_works">
       <div class="row" style="align-content:center">
         <h3>My Works</h3>
+        <div v-for="(work) in works" class="row">
+          <h5>{{work.name}}</h5>
+          <p>{{work.overview}}</p>
+          <div v-for="(entry) in work.list" class="col s12 m6 l3">
+            <div class="card">
+              <div class="card-image activator waves-effect waves-block waves-light">
+                <i class="material-icons right" style="margin:10px">more_vert</i>
+                <img :src="entry.icon||'img/icon.png'" class="activator">
+                <span class="card-title activator">{{entry.name}}</span>
+              </div>
+              <div class="card-reveal">
+                  <i class="card-title material-icons right">close</i>
+                  <span class="card-title grey-text text-darken-4">{{entry.name}}</span>
+                <p>{{entry.description}}</p>
+              </div>
+              <div class="card-action">
+                <a :href="entry.link">VISIT</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -82,7 +103,8 @@
   var app = new Vue({
     el:'#app',
     data:{
-      sections:$('div.section').toArray().filter(div=>{return div.id!=''}).map(div=>{return {id:div.id,title:div.id.split('_').map(s=>{return s[0].toUpperCase()+s.slice(1)}).join(' ')}})
+      sections:$('div.section').toArray().filter(div=>{return div.id!=''}).map(div=>{return {id:div.id,title:div.id.split('_').map(s=>{return s[0].toUpperCase()+s.slice(1)}).join(' ')}}),
+      works:false
     }
   })
 
@@ -96,6 +118,11 @@
       });
     }
   });
+
+  $.ajax({
+    url:'works.json',
+    success:(data)=>{app.works=data}
+  })
 </script>
 
 </html>

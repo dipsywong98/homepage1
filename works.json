@@ -1,0 +1,72 @@
+[
+  {
+    "name":"projects",
+    "overview":"Teams and big projects",
+    "list":[{
+      "name":"HKUST Robotics Team",
+      "description":"Smart Car Team Member, Camera Chasing Team",
+      "link":"https://github.com/hkust-smartcar",
+      "icon":"https://avatars1.githubusercontent.com/u/10128446?s=200&v=4"
+    },{
+      "name":"Procal",
+      "description":"Open Sourced Scientific Calculator",
+      "link":"https://github.com/ProcalApp",
+      "icon":"https://avatars3.githubusercontent.com/u/31364126?s=200&v=4"
+    },{
+      "name":"USThing",
+      "description":"~~Just an App~~      Random Developer",
+      "link":"https://usthing.ust.hk",
+      "icon":"https://avatars2.githubusercontent.com/u/26360549?s=200&v=4"
+    },{
+      "name":"twf-techniques",
+      "description":"Game Making Tutorial Site for TWF",
+      "link":"https://sites.google.com/site/twftechnique",
+      "icon":"img/tong.jpg"
+    }]
+  },
+  {
+    "name":"mini-projects",
+    "overview":"I love making mini side kick project for fun",
+    "list":[{
+      "name":"Exchange Fetch",
+      "description":"Get HKUST exchange credit transfer data",      
+      "link":"https://dipsywong98.github.io/Exchange-Fetch/",
+      "icon":""
+    },{
+      "name":"Find Room",
+      "description":"Find Empty Room in HKUST",
+      "link":"https://github.com/dipsywong98/USThing-FindRoom",
+      "icon":""
+    },{
+      "name":"TWF 300",
+      "description":"Game Making Competition",
+      "link":"https://twf.jamiephan.net/contest/",
+      "icon":"https://twf.jamiephan.net/contest/gold.png"
+    }]
+  },
+  {
+    "name":"games",
+    "overview":"I start making game since seondary 3 using a game feature in Twilight Wars. Here I develop my programming mindset and my interest in computer science. These games are made thousands years ago",
+    "list":[{
+      "name":"Twilight Balls",
+      "description":"Just copying Puzzle and Dragon. Listed in the CV of the Game Master WTF",
+      "link":"http://tw.gamelet.com/mission.do?code=csArena&gltParam=%7B%27mode%27%3A%27userMission%27%2C+%27id%27%3A%27245664%27%7D",
+      "icon":"http://twstatic.gamelet.com/gamelet/games/csArena_images/um245664_1bd2oav"
+    },{
+      "name":"Mirror Maze",
+      "description":"Sokuban with mirrors and lazers. Recommended by Game Master",
+      "link":"http://tw.gamelet.com/mission.do?code=csArena&gltParam=%7B%27mode%27%3A%27userMission%27%2C+%27id%27%3A%27222216%27%7D",
+      "icon":"http://twstatic.gamelet.com/gamelet/games/csArena_images/um222216_1apn2a3"
+    },{
+      "name":"Age of Tower Defense",
+      "description":"A mixture of COC, AOE and LOL. Biggest game I made",
+      "link":"http://tw.gamelet.com/mission.do?code=csArena&gltParam=%7B%27mode%27%3A%27userMission%27%2C+%27id%27%3A%27185670%27%7D",
+      "icon":"http://twstatic.gamelet.com/gamelet/games/csArena_images/um185670_1aetbj8"
+    },{
+      "name":"LUA Revenge",
+      "description":"Game for Learning LUA. Beginer Level",
+      "link":"http://tw.gamelet.com/mission.do?code=csArena&gltParam=%7B%27mode%27%3A%27userMission%27%2C+%27id%27%3A%27270136%27%7D",
+      "icon":"http://twstatic.gamelet.com/gamelet/games/csArena_images/um270136_1c9g2n7"
+    }]
+  }
+]

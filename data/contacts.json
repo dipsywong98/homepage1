@@ -1,0 +1,18 @@
+{
+  "GitHub": {
+    "icon": "fa-github-square",
+    "link": "https://github.com/dipsywong98/"
+  },
+  "facebook": {
+    "icon": "fa-facebook-official",
+    "link": "https://www.facebook.com/FK.twf/"
+  },
+  "YouTube": {
+    "icon": "fa-youtube-play",
+    "link": "https://www.youtube.com/user/FacebookArmyOffical"
+  },
+  "email": {
+    "icon": "fa-envelope",
+    "link": "mailto:ycwongal@connect.ust.hk"
+  }
+}

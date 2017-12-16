@@ -7,6 +7,16 @@
   src: url("fonts/04B_19__.TTF") format("truetype");
 }
 
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
 .b{
   background-color:#84C3CF
 }
@@ -30,7 +40,7 @@ first section's style
   background-size: auto 100vh;
   resize: both;
   height: 100vh;
-  padding-top:0px;
+  /* padding-top:0px; */
 }
 .section.head h6 {
   margin-top:30vh;
@@ -55,7 +65,7 @@ first section's style
 }
 
 .section.head a.btn {
-  margin-top:10vh;
+  /* margin-top:10vh; */
   color:#000000;
   border:10px #000000;
   border-radius: 3px;

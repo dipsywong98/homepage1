@@ -80,6 +80,7 @@
                 </div>
                 <div class="card-action">
                   <a :href="entry.link">VISIT</a>
+                  <a v-if="entry.source" :href="entry.source">SOURCE</a>
                 </div>
               </div>
             </div>
@@ -87,19 +88,25 @@
         </div>
       </div>
     </main>
+    <div class="section" id="contact"></div>
     <footer class="page-footer b">
       <div class="container">
         <div class="row">
-          <a class="grey-text text-lighten-3 col 3" v-for="(v,k) in contacts" :href="v.link" target="_blank">
-            <span class="tooltipped" data-position="bottom" data-delay="50" :data-tooltip="`Find Me through ${k}`">
-              <i :class="`fa ${v.icon}`" aria-hidden="true" style="font-size:10vw"></i>
-            </span>
-          </a>
+          <div class="col l4 s12">
+            <h3 class="grey-text text-lighten-4">Contact</h3>
+          </div>
+          <div class="col l8 s12">
+            <a class="grey-text text-lighten-3 col 3" v-for="(v,k) in contacts" :href="v.link" target="_blank">
+              <span class="tooltipped" data-position="bottom" data-delay="50" :data-tooltip="`Find Me through ${k}`">
+                <i :class="`fa ${v.icon}`" aria-hidden="true" style="font-size:10vw"></i>
+              </span>
+            </a>
+          </div>
         </div>
       </div>
       <div class="footer-copyright">
         <div class="container">Make with love by Dipsy, Copyright© 2017 All Right Reserved
-          <a class="grey-text text-lighten-4 right" target="_blank" href="https://github.com/dipsywong98/dipsywong98.github.io">{{LastUpdate}}</a>
+          <a class="grey-text text-lighten-4 right" target="_blank" href="https://github.com/dipsywong98/dipsywong98.github.io">Last Update: {{LastUpdate}}</a>
         </div>
       </div>
     </footer>
@@ -150,6 +157,10 @@
   $.ajax({
     url: 'data/contacts.json',
     success: (data) => { app.contacts = data }
+  })
+  $.ajax({
+    url: 'https://api.github.com/repos/dipsywong98/dipsywong98.github.io/commits/master',
+    success: (data) => { app.LastUpdate = data.commit.author.date + " " + data.commit.message }
   })
 </script>
 

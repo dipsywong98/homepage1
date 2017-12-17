@@ -31,12 +31,14 @@
       "name":"Exchange Fetch",
       "description":"Get HKUST exchange credit transfer data",      
       "link":"https://dipsywong98.github.io/Exchange-Fetch/",
-      "icon":""
+      "icon":"",
+      "source":"https://github.com/dipsywong98/Exchange-Fetch/"
     },{
       "name":"Find Room",
       "description":"Find Empty Room in HKUST",
       "link":"https://github.com/dipsywong98/USThing-FindRoom",
-      "icon":""
+      "icon":"",
+      "source":"https://github.com/dipsywong98/USThing-FindRoom"
     },{
       "name":"TWF 300",
       "description":"Game Making Competition",

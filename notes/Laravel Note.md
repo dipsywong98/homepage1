@@ -2,6 +2,10 @@
 
 copy and pasted from https://scotch.io/tutorials/a-guide-to-using-eloquent-orm-in-laravel
 
+## Hello Laravel
+
+Get start with Laravel
+
 ### Install Laravel
 
 1. install composer
@@ -31,6 +35,10 @@ php artisan serve
 
 go to `http://localhost:8000` or `http://127.0.0.1:8000/`, hello world
 
+## Database with Laravel
+
+get start with using database with laraval
+
 ### Config the database
 
 1. address
@@ -52,7 +60,7 @@ php artisan make:migration create_bears_table --create=bears
 
 a new file will appear at `database\migrations`
 
-the columns
+define the columns in the table
 
 ```PHP
 Schema::create('bears', function(Blueprint $table)
@@ -91,7 +99,7 @@ public function boot()
 }
 ```
 
-### Create Models
+### Create Models (to hold an entry in table)
 
 create at `app\Models` (directory created)
 
@@ -131,7 +139,7 @@ class Bear extends Model {
 
 **use full name when using other models**
 
-### Create seed
+### Create Seed for Testing
 
 at `database\seeds`, create testing datasets
 
@@ -268,5 +276,172 @@ class DatabaseSeeder extends Seeder {
     }
     
 
+```
+
+Run seed 
+
+```shell
+php artisan db:seed
+```
+
+### Database Functions in Short
+
+Create
+
+```PHP
+//create new entry in DB and assign
+$bearLawly = Bear::create(array(
+                'name'         => 'Lawly',
+                'type'         => 'Grizzly',
+                'danger_level' => 8
+            ));
+
+// find the bear or create it into the database
+Bear::firstOrCreate(array('name' => 'Lawly'));
+
+// find the bear or instantiate a new instance into the object we want
+//without creating it in DB
+$bear = Bear::firstOrNew(array('name' => 'Cerms'));
+```
+
+find
+
+```php
+// get all the bears
+$bears = Bear::all();
+
+// find a specific bear by id
+$bear = Bear::find(1);
+
+// find a bear by a specific attribute
+$bearLawly = Bear::where('name', '=', 'Lawly')->first();
+
+// find a bear with danger level greater than 5
+$dangerousBears = Bear::where('danger_level', '>', 5)->get();
+
+//multiple conditions
+$results = User::where([
+    ['column_1', '=', 'value_1'],
+    ['column_2', '<>', 'value_2'],
+    [COLUMN, OPERATOR, VALUE],
+    ...
+])->orWhere([
+    ['column_1', '=', 'value_1'],
+    ['column_2', '<>', 'value_2'],
+    [COLUMN, OPERATOR, VALUE],
+    ...
+])->get();
+```
+
+update
+
+```php
+//change the attributes of an instance, then
+$lawly->save();
+```
+
+delete
+
+```php
+// find and delete a record
+$bear = Bear::find(1);
+$bear->delete();
+
+// delete a record 
+Bear::destroy(1);
+
+// delete multiple records 
+Bear::destroy(1, 2, 3);
+
+// find and delete all bears with a danger level over 5
+Bear::where('danger_level', '>', 5)->delete();
+```
+
+query
+
+one to one
+
+```php
+// find a bear named Adobot
+$adobot = Bear::where('name', '=', 'Adobot')->first();
+
+// get the fish that Adobot has
+$fish = $adobot->fish;
+
+// get the weight of the fish Adobot is going to eat
+$fish->weight;
+
+// alternatively you could go straight to the weight attribute
+$adobot->fish->weight;
+```
+
+one to many
+
+```php
+// find the trees lawly climbs
+$lawly = Bear::where('name', '=', 'Lawly')->first();
+
+foreach ($lawly->trees as $tree)
+  echo $tree->type . ' ' . $tree->age;
+```
+
+many to many
+
+```php
+// get the picnics that Cerms goes to ------------------------
+$cerms = Bear::where('name', '=', 'Cerms')->first();
+
+// get the picnics and their names and taste levels
+foreach ($cerms->picnics as $picnic) 
+  echo $picnic->name . ' ' . $picnic->taste_level;
+
+// get the bears that go to the Grand Canyon picnic -------------
+$grandCanyon = Picnic::where('name', '=', 'Grand Canyon')->first();
+
+// show the bears
+foreach ($grandCanyon->bears as $bear)
+  echo $bear->name . ' ' . $bear->type . ' ' . $bear->danger_level;
+```
+
+## Web Frontend and Routing
+
+### Basic Routing
+
+goto `routes\web.php`(this is automatically loaded by the framework)
+
+```php
+Route::get('foo', function () {
+    return 'Hello World';
+});
+```
+
+parameter
+
+```php
+Route::get('foo/{id}/', function ($id) {
+    return "hello $id";
+});
+
+//optional parameter
+Route::get('foo/{id?}/', function ($id=null) {
+    return "hello $id";
+});
+```
+
+
+
+### Views
+
+basically html files to be loaded by php
+
+`resources/views/myview.blade.php`
+
+route to myview
+
+```php
+Route::get('myview', function () {
+
+    return view('myview',['bears'=> Bear::all()]);//the array is variables to pass
+});
 ```
 

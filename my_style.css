@@ -91,6 +91,10 @@ general section style
   background-image: url("img/oscon.jpg");
 }
 
+.section.photo.success {
+  background-image: url("img/success.jpg");
+}
+
 .section.container {
   background-color: #FFFFFF;
   padding-top:5rem;

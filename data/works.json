@@ -3,13 +3,23 @@
     "name":"projects",
     "overview":"Teams and big projects",
     "list":[{
-      "name":"HKUST Robotics Team",
-      "description":"Smart Car Team Member, Camera Chasing Team",
-      "link":"https://github.com/hkust-smartcar",
+      "name":"HKUST SmartCar Team Creative Group 2018",
+      "description":"A robot which can play Quorridor using OpenMV(Camera, python), k60(Control, embedded system), Movidius(Image processing), ElectronJS(User Interface)",
+      "link":"https://github.com/hkust-smartcar/Creative18",
+      "icon":"https://avatars1.githubusercontent.com/u/10128446?s=200&v=4"
+    },{
+      "name":"NFC Tuckshop on k60 for SmartCar Team",
+      "description":"A Point of Sales system using NFC technology, with touchscreen on k60 connecting raspi nodeJS host through bluetooth",
+      "link":"https://github.com/hkust-smartcar/NFC-Server",
+      "icon":"https://avatars1.githubusercontent.com/u/10128446?s=200&v=4"
+    },{
+      "name":"HKUST SmartCar Team Chasing Group 2017",
+      "description":"Two car that can automactically run on track and perform overtaking",
+      "link":"https://github.com/hkust-smartcar/Creative17",
       "icon":"https://avatars1.githubusercontent.com/u/10128446?s=200&v=4"
     },{
       "name":"Procal",
-      "description":"Open Sourced Scientific Calculator",
+      "description":"Open Sourced Programmable Scientific Calculator",
       "link":"https://github.com/ProcalApp",
       "icon":"https://avatars3.githubusercontent.com/u/31364126?s=200&v=4"
     },{
@@ -25,9 +35,19 @@
     }]
   },
   {
-    "name":"mini-projects",
+    "name":"mini-projects and games",
     "overview":"I love making mini side kick project for fun",
     "list":[{
+      "name":"Corner Detection Challenge Judge",
+      "description":"Automatic juding system which compiles and grade C++ scripts, and host without exposing IP address",
+      "link":"https://github.com/hkust-smartcar/Corner-Detection-Challenge",
+      "icon":"https://avatars1.githubusercontent.com/u/10128446?s=200&v=4"
+    },{
+      "name":"SpyFall",
+      "description":"A SpyFall Game made with firebase and reactJS(Mui) with nextJS hosted on heroku",
+      "link":"https://github.com/dipsywong98/SpyFall",
+      "icon":"img/spyfall.png"
+    },{
       "name":"Exchange Fetch",
       "description":"Get HKUST exchange credit transfer data",      
       "link":"https://dipsywong98.github.io/Exchange-Fetch/",
@@ -47,7 +67,7 @@
     }]
   },
   {
-    "name":"games",
+    "name":"games from old days",
     "overview":"I start making game since seondary 3 using a game feature in Twilight Wars. Here I develop my programming mindset and my interest in computer science. These games are made thousands years ago",
     "list":[{
       "name":"Twilight Balls",

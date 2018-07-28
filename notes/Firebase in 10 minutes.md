@@ -16,3 +16,41 @@ Add this to your html, that's it
 
 ### Save Data to Database
 
+update some key by value
+
+```js
+firebase.database().ref('your/location').update({
+    key: data
+})
+```
+
+override value of some key
+
+```js
+firebase.database().ref('your/location').set(vale)
+```
+
+
+
+### Read Date from Datebase
+
+once (trigger once the event happened)
+
+```js
+firebase.database().ref('your/location').once("value").then(function (snapshot) {
+      your_value = snapshot.val()
+    }, function (errorObject) {
+      console.log("The read failed: " + errorObject.code);
+    })
+```
+
+listener (trigger every time when the event happen)
+
+```js
+firebase.database().ref('your/location').on('value',function (snapshot) {
+      your_value = snapshot.val()
+    }, function (errorObject) {
+      console.log("The read failed: " + errorObject.code);
+    })
+```
+

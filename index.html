@@ -6,7 +6,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117723298-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'UA-117723298-1');
@@ -22,6 +22,9 @@
   <script src="js/materialize.min.js"></script>
   <script src="js/moment.min.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta charSet="utf-8" />
+  <meta name="viewport" content="user-scalable=0, initial-scale=1, minimum-scale=1, width=device-width, height=device-height"
+  />
 
 </head>
 
@@ -100,7 +103,8 @@
       <div class="section photo success">
       </div>
       <div class="section container" id="notes">
-        <h5>Notes</h5>
+        <h3>Notes</h3>
+        <h5>Just some random notes which were joted when I was learning</h5>
         <!-- https://api.github.com/repos/dipsywong98/dipsywong98.github.io/contents/notes -->
       </div>
     </main>
@@ -148,8 +152,14 @@
   var app = new Vue({
     el: '#app',
     data: {
-      sections: $('div.section').toArray().filter(div => { return div.id != '' }).map(div => { return { id: div.id, title: div.id.split('_').map(s => { return s[0].toUpperCase() + s.slice(1) }).join(' ') } }),
+      sections: $('div.section').toArray()
+        .filter(div => div.id !== '')
+        .map(div => ({
+          id: div.id,
+          title: div.id.split('_').map(s => s[0].toUpperCase() + s.slice(1)).join(' ')
+        })),
       works: false,
+      notes: [],
       contacts: false,
       LastUpdate: 'N/A'
     }
@@ -168,15 +178,19 @@
 
   $.ajax({
     url: 'data/works.json',
-    success: (data) => { app.works = data }
+    success: data => { app.works = data }
   })
   $.ajax({
     url: 'data/contacts.json',
-    success: (data) => { app.contacts = data }
+    success: data => { app.contacts = data }
   })
   $.ajax({
     url: 'https://api.github.com/repos/dipsywong98/dipsywong98.github.io/commits/master',
-    success: (data) => { app.LastUpdate = data.commit.author.date + " " + data.commit.message }
+    success: data => { app.LastUpdate = data.commit.author.date + " " + data.commit.message }
+  })
+  $.ajax({
+    url: 'data/notes.json',
+    success: data => { app.notes = data }
   })
 </script>
 

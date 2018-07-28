@@ -1,7 +1,7 @@
 [
   {
-    "name":"projects",
-    "overview":"Teams and big projects",
+    "name":"Projects",
+    "overview":"Teams and Big Projects",
     "list":[{
       "name":"HKUST SmartCar Team Creative Group 2018",
       "description":"A robot which can play Quorridor using OpenMV(Camera, python), k60(Control, embedded system), Movidius(Image processing), ElectronJS(User Interface)",
@@ -35,7 +35,7 @@
     }]
   },
   {
-    "name":"mini-projects and games",
+    "name":"Mini-Projects and Games",
     "overview":"I love making mini side kick project for fun",
     "list":[{
       "name":"Corner Detection Challenge Judge",
@@ -67,8 +67,8 @@
     }]
   },
   {
-    "name":"games from old days",
-    "overview":"I start making game since seondary 3 using a game feature in Twilight Wars. Here I develop my programming mindset and my interest in computer science. These games are made thousands years ago",
+    "name":"TWF Games",
+    "overview":"Games Made Before University in Twilight Wars",
     "list":[{
       "name":"Twilight Balls",
       "description":"Just copying Puzzle and Dragon. Listed in the CV of the Game Master WTF",

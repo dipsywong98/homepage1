@@ -62,7 +62,8 @@
       </div>
       <div class="section photo profile" id="about_me">
         <div class="card" style="max-width: 800px;">
-          <div class="row" style="margin:30px 20px"><!--align-content:center; display:flex; justify-content: space-evenly;-->
+          <div class="row" style="margin:30px 20px">
+            <!--align-content:center; display:flex; justify-content: space-evenly;-->
             <div class="col s0 m1"></div>
             <div class="profile col s12 m5" style="text-align: center">
               <img class="s0 m12 l0" src="img/icon.png" width="204px" style="margin:20px 0px">
@@ -116,6 +117,32 @@
         <h3>Notes</h3>
         <h5>Just some random notes which were joted when I was learning</h5>
         <!-- https://api.github.com/repos/dipsywong98/dipsywong98.github.io/contents/notes -->
+        <table>
+          <tr>
+            <th>
+              Created
+            </th>
+            <th>
+              Modified
+            </th>
+            <th>
+              Title
+            </th>
+          </tr>
+          <tr v-for="note in notes">
+            <!-- <a :href="note.path"> -->
+            <td>
+              {{note.createdDisplay}}
+            </td>
+            <td>
+              {{note.modifiedDisplay}}
+            </td>
+            <td>
+              <a :href="note.path">{{note.title}}</a>
+            </td>
+            <!-- </a> -->
+          </tr>
+        </table>
       </div>
     </main>
     <div class="section" id="contact"></div>
@@ -169,7 +196,7 @@
           title: div.id.split('_').map(s => s[0].toUpperCase() + s.slice(1)).join(' ')
         })),
       works: false,
-      notes: [],
+      notes: false,
       contacts: false,
       LastUpdate: 'N/A'
     }
@@ -200,7 +227,16 @@
   })
   $.ajax({
     url: 'data/notes.json',
-    success: data => { app.notes = data }
+    success: data => {
+      app.notes = data.sort((a, b) => moment(a.created).isBefore(b.created)).map(note => ({
+        title: note.path.replace('.md', ''),
+        path: 'notes/' + note.path,
+        created: note.created,
+        modified: note.modified,
+        createdDisplay: moment(note.created).format('YYYY-MM-DD'),
+        modifiedDisplay: moment(note.modified).format('YYYY-MM-DD'),
+      }))
+    }
   })
 </script>
 

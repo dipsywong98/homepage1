@@ -101,10 +101,19 @@ general section style
   padding-bottom: 5rem;
 }
 
+.section.photo.profile {
+  height: 100vh;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("img/sky.jpg");
+}
+
 .section img.profile{
-  width: 30vw;
   resize: both;
   padding:1vw;
+  height: 30vh;
 }
 
 .section.quote {

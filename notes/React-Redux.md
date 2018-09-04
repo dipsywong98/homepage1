@@ -103,7 +103,7 @@ const valueInStore = store.getState()	//{lang:'en'}
 store.dispatch(setLang('zh'))	//setLang 是上面定義過的action
 const newValueInStore = store.getState()	//{lang:'zh'}
 
-store.dispatch({type:'SetLang',newLang:'js'})	//action說白了不過是object /_>\
+store.dispatch({type:'SetLang',newLang:'js'})	//action說白了不過是object，所以直丟個object給dispatc是沒有問題的 /_>\
 const lastestValueInStore = store.getState()	//{lang:'js'}
 
 export {store,setLang}
@@ -120,7 +120,7 @@ import {Provider} from 'react-redux'
 import {store} from './store' //假設剛才的都在store.js
 export default (props)=>(
     <Provider store={store}>
-    	{/*裡面的都可以用redux 我們剛定義的容量*/}
+    	{/*裡面的都可以用redux 我們剛定義的容器*/}
     </Provider>
 )
 ```
@@ -155,7 +155,7 @@ class Picker extends Component {
   }
 }
 
-//在store中拿出lang，props多一項是lang
+//左面在store中拿出lang，右面在props新增一項是lang
 const mapStateToProps = ({ lang }) => ({ lang })
 
 //dispatch是store的dispatch function，props多一項是setLang，會發動setLang action的function

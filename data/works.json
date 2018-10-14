@@ -29,7 +29,7 @@
       "icon":"https://avatars2.githubusercontent.com/u/26360549?s=200&v=4"
     },{
       "name":"twf-techniques",
-      "description":"Game Making Tutorial Site for TWF",
+      "description":"Biggest Game Making Tutorial Site for TWF, Twilight Wars game maker",
       "link":"https://sites.google.com/site/twftechnique",
       "icon":"img/tong.jpg"
     }]
@@ -39,36 +39,39 @@
     "overview":"I love making mini side kick project for fun",
     "list":[{
       "name":"Corner Detection Challenge Judge",
-      "description":"Automatic juding system which compiles and grade C++ scripts, and host without exposing IP address",
+      "description":"Automatic juding system which compiles and grade C++ scripts, and host without exposing IP address. BTW now it is not working becuase of skygear. (I don't want to touch skygear again)",
       "link":"https://github.com/hkust-smartcar/Corner-Detection-Challenge",
       "icon":"https://avatars1.githubusercontent.com/u/10128446?s=200&v=4"
     },{
       "name":"SpyFall",
       "description":"A SpyFall Game made with firebase and reactJS(Mui) with nextJS hosted on heroku",
-      "link":"https://github.com/dipsywong98/SpyFall",
+      "link":"https://spy4.herokuapp.com/",
+      "source":"https://github.com/dipsywong98/SpyFall",
       "icon":"img/spyfall.png"
     },{
       "name":"Exchange Fetch",
-      "description":"Get HKUST exchange credit transfer data",      
+      "description":"A more robust way to get HKUST exchange credit transfer data",      
       "link":"https://dipsywong98.github.io/Exchange-Fetch/",
       "icon":"",
       "source":"https://github.com/dipsywong98/Exchange-Fetch/"
     },{
       "name":"Find Room",
-      "description":"Find Empty Room in HKUST",
-      "link":"https://github.com/dipsywong98/USThing-FindRoom",
+      "description":"Find empty classroom in HKUST and know when is it free",
+      "link":"https://dipsywong98.github.io/USThing-FindRoom",
       "icon":"",
       "source":"https://github.com/dipsywong98/USThing-FindRoom"
     },{
       "name":"TWF 300",
       "description":"Game Making Competition",
       "link":"https://twf.jamiephan.net/contest/",
+      "source":"https://github.com/dipsywong98/twf300contest",
       "icon":"https://twf.jamiephan.net/contest/gold.png"
     }]
   },
   {
     "name":"TWF Games",
     "overview":"Games Made Before University in Twilight Wars",
+    "note":"<a href=\"http://tw.gamelet.com/missionDirector.do?code=csArena&username=100000816758250%40facebook.com\">more games</a>",
     "list":[{
       "name":"Twilight Balls",
       "description":"Just copying Puzzle and Dragon. Listed in the CV of the Game Master WTF",

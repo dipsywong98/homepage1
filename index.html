@@ -108,7 +108,14 @@
                 </div>
               </div>
             </div>
+            <div v-if="'note' in work" v-html="work.note"></div>
           </div>
+        </div>
+        <div class="section" style="margin:0px" id="Resume">
+          <h4>Resume</h4>
+          <p>I don't know why you are already viewing my profile, still need to download my resume...</p>
+          <p>But I just leave it here...</p>
+          <a href="https://drive.google.com/file/d/1FEv4PYBG-YCyvx3TTIgREIC9rRbGyVFU/view?usp=sharing" class="waves-effect waves-light btn teal">Download</a>
         </div>
       </div>
       <div class="section photo success">
@@ -162,7 +169,7 @@
         </div>
       </div>
       <div class="footer-copyright">
-        <div class="container">Make with love by Dipsy, Copyright© 2017 All Right Reserved
+        <div class="container">Make with love by Dipsy, Copyright© 2018 All Right Reserved
           <a class="grey-text text-lighten-4 right" target="_blank" href="https://github.com/dipsywong98/dipsywong98.github.io">Last Update: {{LastUpdate}}</a>
         </div>
       </div>
